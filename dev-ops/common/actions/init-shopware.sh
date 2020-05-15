@@ -6,6 +6,8 @@ INCLUDE: ./cache.sh
 bin/console database:migrate --all core
 bin/console database:migrate-destructive --all core
 
+bin/console locale:change-default '__INSTALL_DEFAULT_LOCALE__'
+
 bin/console dal:refresh:index
 
 bin/console scheduled-task:register
